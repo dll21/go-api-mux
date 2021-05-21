@@ -39,7 +39,7 @@ func main() {
 	r.HandleFunc("/notes", UpdateNote).Methods("PUT")
 	r.HandleFunc("/notes", DeleteNote).Methods("DELETE")
 	r.HandleFunc("/notes/{id}", FindNote).Methods("GET")
-	if err := http.ListenAndServe(":3000", r); err != nil {
+	if err := http.ListenAndServe(":8080", r); err != nil {
 		log.Fatal(err)
 	}
 }
